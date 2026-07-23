@@ -57,7 +57,6 @@ if __name__ == "__main__":
         # Resaltamos especialmente el nuevo punto movido
         plt.plot(x_nodos[indice_modificado], y_modificado[indice_modificado], color='tab:red', marker='o', markeredgecolor='black', zorder=5)
         
-        plt.title('Efecto global de la modificación de un dato en el spline cúbico')
         plt.xlabel('x') 
         plt.ylabel('y')
         

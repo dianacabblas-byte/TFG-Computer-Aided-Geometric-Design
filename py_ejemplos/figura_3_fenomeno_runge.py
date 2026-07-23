@@ -48,7 +48,6 @@ if __name__ == "__main__":
         # Pintamos los nodos discretos
         plt.plot(x_nodos, y_nodos, color='tab:blue', marker='o', linestyle='none', label='Nodos equidistantes', zorder=4)
         
-        plt.title('Fenómeno de Runge en interpolación polinómica global')
         plt.xlabel('x') 
         plt.ylabel('y')
         

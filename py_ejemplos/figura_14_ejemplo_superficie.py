@@ -94,7 +94,6 @@ def evaluar_superficie(red_control, grado_u, grado_v, num_u, num_v):
 if __name__ == "__main__":
     
     try:
-        
         # 1. Definición de la red de control 
         red_control = np.array([
             [[ 0,  0, 0], [ 2,  0, 3], [ 2,  0, 6], [ 0,  0, 9]], 
@@ -155,7 +154,6 @@ if __name__ == "__main__":
             else:
                 ax.plot(curva_puntos[:, 0], curva_puntos[:, 1], curva_puntos[:, 2], color='crimson', linewidth=1.5, zorder=5)
 
-        ax.set_title('Superficie B-spline (barrido)', fontsize=12)
         ax.set_xlabel('x')
         ax.set_ylabel('y')
         ax.set_zlabel('z')

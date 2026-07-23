@@ -42,7 +42,6 @@ if __name__ == "__main__":
         # Pintamos los nodos discretos
         plt.plot(x_nodos, y_nodos, color='black', marker='o', linestyle='none', label='Datos interpolados', zorder=5)
         
-        plt.title('Construcción de un spline cúbico interpolante')
         plt.xlabel('$x$') 
         plt.ylabel('$y$')
         

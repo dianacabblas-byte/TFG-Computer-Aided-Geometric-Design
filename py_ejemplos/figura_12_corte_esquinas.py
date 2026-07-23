@@ -64,7 +64,6 @@ if __name__ == "__main__":
         # Curva final
         ax.plot(curva_final[:, 0], curva_final[:, 1], '-', color='crimson', linewidth=2.0, zorder=4, label='Curva final')
         
-        ax.set_title('Algoritmo de corte de esquinas', fontsize=12)
         ax.set_xlabel('x', fontsize=12)
         ax.set_ylabel('y', fontsize=12)
         ax.set_aspect('equal')

@@ -52,7 +52,6 @@ if __name__ == "__main__":
         # Pintamos los datos
         plt.plot(x_nodos, y_nodos, color='black', marker='o', markersize=4, linestyle='none', label='Datos', zorder=5)
         
-        plt.title('Spline cúbico frente a interpolación polinómica global')
         plt.xlabel('x') 
         plt.ylabel('y')
         

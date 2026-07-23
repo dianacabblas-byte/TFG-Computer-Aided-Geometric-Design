@@ -22,7 +22,7 @@ def cox_de_boor(u, puntos_control, U, grado):
         r += 1
         
     # Matriz auxiliar para calcular la evaluación
-    Q = np.array(puntos_control, dtype=float)
+    Q = np.array(puntos_control)
     
     # Aplicamos Cox-de Boor
     for j in range(1, grado + 1):
@@ -51,7 +51,7 @@ if __name__ == "__main__":
     numero_puntos = 500
 
     try:
-        # 1. Truco matemático: Usar la matriz identidad para aislar las funciones base
+        # 1. Usamos la matriz identidad para aislar las funciones base
         puntos_control = np.eye(n + 1) 
         
         # 2. Cálculos previos
@@ -87,7 +87,6 @@ if __name__ == "__main__":
         plt.text(2.0, 0.92, 'Soporte de $N_{3,3}$', ha='center', va='center', fontsize=11, 
                  bbox=dict(facecolor='white', alpha=0.7, edgecolor='none'), zorder=4)
                  
-        plt.title(f'Funciones base B-spline de grado {grado}')
         plt.xlabel('$u$')
         plt.ylabel(f'$N_{{i,{grado}}}(u)$')
         

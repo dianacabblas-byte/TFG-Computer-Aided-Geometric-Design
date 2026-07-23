@@ -90,9 +90,11 @@ def evaluar_superficie(red_control, grado_u, grado_v, num_u, num_v):
         
     return X, Y, Z
 
+
 if __name__ == "__main__":
     
     try:
+        
         # 1. Definición de la red de control 
         red_orig = np.array([
             [[0, 0, 0], [0, 1, 0], [0, 2, 0], [0, 3, 0], [0, 4, 0], [0, 5, 0], [0, 6, 0]],
@@ -107,17 +109,17 @@ if __name__ == "__main__":
         red_mod = np.copy(red_orig)
         red_mod[3, 3, 2] = 8.0 
         
-        n = len(red_orig) - 1
-        m = len(red_orig[0]) - 1
         grado_u, grado_v = 3, 3
+        
         
         # 2. Cálculo de la superficie
         res_u, res_v = 50, 50
-
+        
         X_orig, Y_orig, Z_orig = evaluar_superficie(red_orig, grado_u, grado_v, res_u, res_v)
         X_mod, Y_mod, Z_mod = evaluar_superficie(red_mod, grado_u, grado_v, res_u, res_v)
 
         print("Generando gráfica...")
+        
         
         # 3. Dibujo
         fig = plt.figure(figsize=(15, 6))
@@ -129,9 +131,8 @@ if __name__ == "__main__":
         X_ctrl = red_orig[:, :, 0]
         Y_ctrl = red_orig[:, :, 1]
         Z_ctrl_orig = red_orig[:, :, 2]
-        Z_ctrl_mod = red_mod[:, :, 2]
         
-        ax1.plot_wireframe(X_ctrl, Y_ctrl, Z_ctrl_orig, color='black', alpha=0.5, linestyle='--')
+        ax1.plot_wireframe(X_ctrl, Y_ctrl, Z_ctrl_orig, color='black', alpha=0.3, linestyle='--')
         ax1.scatter(X_ctrl, Y_ctrl, Z_ctrl_orig, color='gray', s=20)
         
         ax1.set_title('Superficie Original', fontsize=12)
@@ -141,16 +142,19 @@ if __name__ == "__main__":
         ax1.set_zlim(-1, 8)
         ax1.set_box_aspect([1, 1, 0.6])
 
+
         # --- Subplot Derecho: Modificado ---
         ax2 = fig.add_subplot(122, projection='3d')
         ax2.plot_surface(X_mod, Y_mod, Z_mod, cmap='viridis', alpha=0.5, edgecolor='none')
         
-        ax2.plot_wireframe(X_ctrl, Y_ctrl, Z_ctrl_mod, color='black', alpha=0.5, linestyle='--')
+        Z_ctrl_mod = red_mod[:, :, 2]
         
-        colores = ['red' if (i==3 and j==3) else 'gray' for i in range(n+1) for j in range(m+1)]
-        tamanos = [100 if (i==3 and j==3) else 20 for i in range(n+1) for j in range(m+1)]
+        ax2.plot_wireframe(X_ctrl, Y_ctrl, Z_ctrl_mod, color='black', alpha=0.3, linestyle='--')
         
-        ax2.scatter(X_ctrl.flatten(), Y_ctrl.flatten(), Z_ctrl_mod.flatten(), color=colores, s=tamanos, zorder=10)
+        colores = ['red' if (i==3 and j==3) else 'gray' for i in range(len(red_mod)) for j in range(len(red_mod[0]))]
+        tamanos = [100 if (i==3 and j==3) else 20 for i in range(len(red_mod)) for j in range(len(red_mod[0]))]
+        
+        ax2.scatter(X_ctrl.flatten(), Y_ctrl.flatten(), Z_ctrl_mod.flatten(), color=colores, s=tamanos, zorder=10, alpha=1.0)
 
         ax2.set_title('Modificación de un punto de la malla', fontsize=12)
         ax2.set_xlabel('x')

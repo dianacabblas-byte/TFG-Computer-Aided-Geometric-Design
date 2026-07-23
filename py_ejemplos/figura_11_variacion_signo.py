@@ -108,7 +108,6 @@ if __name__ == "__main__":
                 color='royalblue', markeredgecolor='black', zorder=5, 
                 label=f'Cortes en curva ($N={len(intersecciones_curva)}$)')
 
-        ax.set_title('Propiedad de disminución de la variación', fontsize=12)
         ax.set_xlabel('x')
         ax.set_ylabel('y')
         ax.set_aspect('equal')

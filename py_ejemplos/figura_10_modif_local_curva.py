@@ -102,7 +102,6 @@ if __name__ == "__main__":
         ax.plot(puntos_orig[indice_modificado, 0], puntos_orig[indice_modificado, 1], 'o', color='tab:blue', markeredgecolor='black', markersize=6, zorder=5)
         ax.plot(puntos_mod[indice_modificado, 0], puntos_mod[indice_modificado, 1], 'o', color='tab:red', markeredgecolor='black', markersize=6, zorder=5)
         
-        ax.set_title('Efecto local de la modificación de un punto de control en B-splines', fontsize=12)
         ax.set_xlabel('x') 
         ax.set_ylabel('y')
         

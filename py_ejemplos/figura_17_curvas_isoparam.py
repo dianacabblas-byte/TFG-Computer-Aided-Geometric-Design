@@ -118,7 +118,7 @@ if __name__ == "__main__":
         ax = fig.add_subplot(111, projection='3d')
 
         # Superficie de fondo (zorder=0)
-        ax.plot_surface(X_surf, Y_surf, Z_surf, cmap='viridis', alpha=0.7, edgecolor='none', zorder=0)
+        ax.plot_surface(X_surf, Y_surf, Z_surf, cmap='viridis', alpha=0.6, edgecolor='none', zorder=0)
 
         # Red de control (zorder=1 y 2)
         X_ctrl = red_control[:, :, 0]
@@ -140,7 +140,6 @@ if __name__ == "__main__":
         ax.scatter([X_surf[idx_u, idx_v]], [Y_surf[idx_u, idx_v]], [Z_surf[idx_u, idx_v]], 
                    color='red', s=200, zorder=10, depthshade=False, label='Punto evaluado $S(u^*, v^*)$')
 
-        ax.set_title('Evaluación mediante curvas isoparamétricas', fontsize=14)
         ax.set_xlabel('x')
         ax.set_ylabel('y')
         ax.set_zlabel('z')

@@ -117,10 +117,9 @@ if __name__ == "__main__":
             X, Y, Z = evaluar_superficie(red, 3, 3, 15, 15)
             ax.plot_surface(X, Y, Z, color='tab:olive', edgecolor='black', linewidth=0.1, alpha=0.9)
         
-        ax.set_title('Tetera de Utah')
-        ax.set_xlabel('Eje X')
-        ax.set_ylabel('Eje Y')
-        ax.set_zlabel('Eje Z')
+        ax.set_xlabel('x')
+        ax.set_ylabel('y')
+        ax.set_zlabel('z')
         
         # Proporciones reales de la caja para que no se deforme
         rango_x = ax.get_xlim()[1] - ax.get_xlim()[0]

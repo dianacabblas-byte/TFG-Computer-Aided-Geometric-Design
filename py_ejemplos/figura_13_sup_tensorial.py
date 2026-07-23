@@ -56,7 +56,6 @@ if __name__ == "__main__":
         # Puntos de control
         ax.scatter(X_ctrl, Y_ctrl, Z_ctrl, color='crimson', s=50, zorder=5, label='Puntos de Control ($P_{i,j}$)')
 
-        ax.set_title('Superficie Tensorial Bilineal', fontsize=12)
         ax.set_xlabel('x')
         ax.set_ylabel('y')
         ax.set_zlabel('z')
