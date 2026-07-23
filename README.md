@@ -1,6 +1,6 @@
 # TFG: Aplicación de Splines Polinómicos en el Diseño Geométrico Asistido por Ordenador
 
-Este repositorio contiene la implementación práctica en Python de los conceptos matemáticos desarrollados en el Trabajo de Fin de Grado sobre CAGD. Abarca desde los fundamentos de la interpolación y aproximación clásica, hasta el modelado de curvas y superficies B-Spline.
+Este repositorio contiene la implementación práctica en Python de los conceptos matemáticos desarrollados en el Trabajo de Fin de Grado. Abarca desde los fundamentos de la interpolación y aproximación clásica, hasta el modelado de curvas y superficies B-Spline.
 
 ## 📂 Estructura del Proyecto
 
